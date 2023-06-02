@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
@@ -21,6 +22,7 @@ android {
 
     buildFeatures{
         viewBinding true
+        dataBinding true
     }
     buildTypes {
         release {
@@ -54,6 +56,12 @@ dependencies {
     implementation 'com.google.maps.android:maps-utils-ktx:3.4.0'
 
     implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    implementation 'com.google.android.libraries.places:places:3.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
